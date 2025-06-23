@@ -329,26 +329,6 @@
 						    :condition-forms ((popper-display-control-p (get-buffer (buffer-name)))
 								      (string-match-p "^ *\\*+ *.* *\\*+ *" (buffer-name))
 								      (member (get-buffer-major-mode (buffer-name)) moz/starred-modes))))
-  (global-set-key (kbd "C-<tab>")		(mk/generic--cycler my/next-buffer-cycler
-						    (switch-to-next-buffer)
-						  (popper-display-control-p (get-buffer (buffer-name)))
-						  (string-match-p "^ *\\*+ *.* *\\*+ *" (buffer-name))
-						  (member (get-buffer-major-mode (buffer-name)) moz/starred-modes)))
-  (global-set-key (kbd "C-<iso-lefttab>")	(mk/generic--cycler my/prev-buffer-cycler
-						    (switch-to-prev-buffer)
-						  (popper-display-control-p (get-buffer (buffer-name)))
-						  (string-match-p "^ *\\*+ *.* *\\*+ *" (buffer-name))
-						  (member (get-buffer-major-mode (buffer-name)) moz/starred-modes)))
-  (global-set-key (kbd "C-M-<tab>")		(mk/generic--cycler my/next-starred-buffer-cycler
-						    (switch-to-next-buffer)
-						  (popper-display-control-p (get-buffer (buffer-name)))
-						  (not (string-match-p "^ *\\*+ *.* *\\*+ *" (buffer-name)))
-						  (member (get-buffer-major-mode (buffer-name)) moz/starred-modes)))
-  (global-set-key (kbd "C-M-S-<iso-lefttab>")	(mk/generic--cycler my/prev-starred-buffer-cycler
-						    (switch-to-prev-buffer)
-						  (popper-display-control-p (get-buffer (buffer-name)))
-						  (not (string-match-p "^ *\\*+ *.* *\\*+ *" (buffer-name)))
-						  (member (get-buffer-major-mode (buffer-name)) moz/starred-modes)))
   (global-set-key (kbd "C-z C-1")		(mk/buffer-toggler my/scratch-buffer-toggler1 "*scratch*"))
   (global-set-key (kbd "C-z C-2")		(mk/buffer-toggler my/scratch-buffer-toggler2 "*scratch*"
 						  :show-prms ((display-buffer-at-bottom)

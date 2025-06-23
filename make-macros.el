@@ -26,6 +26,9 @@
 
   )
 
+(defun my/macro-test ()
+  (message "this was a test"))
+
 (progn						; Buffer-Togglers
   (defun my/compare-buffer (buf1 buf2)
     (equal buf1 buf2))

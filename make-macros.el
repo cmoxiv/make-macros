@@ -93,7 +93,7 @@
 
 (progn						; File-Togglers
   (defun my/compare-file (file1 file2)
-    (and file1
+    (and file2
 	 (equal (expand-file-name file1)
 		(expand-file-name file2))))
 
@@ -338,7 +338,7 @@
 						  :show-prms ((display-buffer-at-bottom)
 							      (dedicated . t))))
 
-  (global-set-key (kbd "C-z C-q")		(mk/dired-toggler my/scratch-dir-toggler1 "~/"))
+  (global-set-key (kbd "C-z C-q")		(mk/dired-toggler my/scratch-dir-toggler1 default-directory))
   (global-set-key (kbd "C-z C-w")		(mk/dired-toggler my/scratch-dir-toggler2 "~/"
 						  :show-prms ((display-buffer-in-side-window)
 							      (dedicated . t))))

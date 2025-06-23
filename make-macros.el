@@ -93,7 +93,8 @@
 
 (progn						; File-Togglers
   (defun my/compare-file (file1 file2)
-    (and file2
+    (and file1
+	 file2
 	 (equal (expand-file-name file1)
 		(expand-file-name file2))))
 

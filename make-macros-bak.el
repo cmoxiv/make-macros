@@ -1,15 +1,4 @@
-;; make-macros.el --- A minimal minor mode -*- lexical-binding: t; -*-
 
-;; Author: Your Name <cmoxiv@gemail.com>
-;; Version: 0.1
-;; Keywords: convenience
-;; Package-Requires: ((emacs "24.4"))
-;; URL: https://example.com/not-so-evil-mode
-
-;; Commentary:
-
-;; `make-macros' is a lightweight Emacs utilities macros for toggling
-;; and cycling through buffers.
 
 (progn						; Tools
   (defmacro defcomp (name &rest funcs)
@@ -369,6 +358,3 @@
 							      (dedicated . t))))
 
   (global-set-key (kbd "C-z C-z")		(mk/term-toggler3 my/toggle-ansi-term-buffer default-directory)))
-
-
-(provide 'make-macros)
